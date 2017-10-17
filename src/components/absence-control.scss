@@ -1,0 +1,51 @@
+@import '~bpk-mixins/index';
+
+$mudano-purple: #9a3cbb;
+
+.absence-control {
+  &__selectors {
+    display: flex;
+    margin-bottom: $bpk-spacing-base;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  &__heading {
+    margin-bottom: $bpk-spacing-base;
+    color: $mudano-purple;
+    text-align: center;
+  }
+
+  &__selector {
+    display: flex;
+    margin: $bpk-spacing-xs;
+    flex-direction: column;
+  }
+
+  &__legend {
+    padding: $bpk-spacing-sm;
+    border: $bpk-border-size-sm solid $bpk-color-gray-700;
+    background-color: $bpk-color-white;
+
+    &-heading {
+      margin-bottom: $bpk-spacing-xs;
+      color: $mudano-purple;
+      text-align: center;
+    }
+
+    &--other-absence {
+      color: $bpk-color-yellow-500;
+      font-weight: bold;
+    }
+
+    &--self-absence {
+      color: $bpk-color-green-500;
+      font-weight: bold;
+    }
+
+    &--clash-absence {
+      color: $bpk-color-red-500;
+      font-weight: bold;
+    }
+  }
+}

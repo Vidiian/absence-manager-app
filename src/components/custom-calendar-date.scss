@@ -1,0 +1,110 @@
+/*
+ * Backpack - Skyscanner's Design System
+ *
+ * Copyright 2017 Skyscanner Ltd
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@import '~bpk-mixins/index';
+
+.custom-calendar-date {
+  width: $bpk-calendar-day-size;
+  height: $bpk-calendar-day-size;
+  padding: 0;
+  border: none;
+  border-radius: $bpk-border-radius-pill;
+  background-color: $bpk-calendar-day-background-color;
+  color: $bpk-calendar-day-color;
+  font-size: $bpk-font-size-base;
+  text-align: center;
+  cursor: pointer;
+  appearance: none;
+  box-sizing: border-box;
+
+  &--modifier-absence-clash {
+    font-weight: bold;
+    color: $bpk-color-red-500;
+  }
+
+  &--modifier-absence-self {
+    font-weight: bold;
+    color: $bpk-color-green-500;
+  }
+
+  &--modifier-absence-other {
+    font-weight: bold;
+    color: $bpk-color-yellow-500;
+  }
+
+  @include bpk-hover {
+    &:not(.custom-calendar-date--selected) {
+      background-color: $bpk-calendar-day-hover-background-color;
+      color: $bpk-calendar-day-hover-color;
+    }
+  }
+
+  &:not(.custom-calendar-date--selected):active {
+    background-color: $bpk-calendar-day-active-background-color;
+    color: $bpk-calendar-day-active-color;
+  }
+
+  &--outside {
+    background-color: $bpk-calendar-day-outside-background-color;
+    color: $bpk-calendar-day-outside-color;
+  }
+
+  &--today {
+    font-weight: bold;
+  }
+
+  &--selected {
+    background-color: $bpk-state-selected-background-color;
+    color: $bpk-calendar-day-selected-color;
+    font-weight: bold;
+    cursor: default;
+
+    &.custom-calendar-date--modifier-absence-clash {
+      background-color: $bpk-color-red-500;
+    }
+
+    &.custom-calendar-date--modifier-absence-self {
+      background-color: $bpk-color-green-500;
+    }
+
+    &.custom-calendar-date--modifier-absence-other {
+      background-color: $bpk-color-yellow-500;
+    }
+  }
+
+  &--focused:not(:disabled):not(.custom-calendar-date--selected) {
+    color: $bpk-state-selected-background-color;
+    box-shadow: 0 0 0 2px $bpk-state-selected-background-color inset;
+  }
+
+  &:disabled {
+    background-color: $bpk-calendar-day-disabled-background-color;
+    color: $bpk-calendar-day-disabled-color;
+    cursor: not-allowed;
+
+    @include bpk-hover {
+      background-color: $bpk-calendar-day-disabled-background-color;
+      color: $bpk-calendar-day-disabled-color;
+    }
+
+    &:active {
+      background-color: $bpk-calendar-day-disabled-background-color;
+      color: $bpk-calendar-day-disabled-color;
+    }
+  }
+}

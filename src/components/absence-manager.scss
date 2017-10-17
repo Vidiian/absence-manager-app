@@ -1,0 +1,27 @@
+@import '~bpk-mixins/index';
+
+$mudano-purple: #9a3cbb;
+
+.absence-manager {
+  &__heading {
+    margin-bottom: $bpk-spacing-sm;
+    border: $bpk-border-size-sm solid $bpk-color-gray-700;
+    background-color: $bpk-color-gray-200;
+    color: $mudano-purple;
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__content-column {
+    display: flex;
+    justify-content: center;
+    border: $bpk-border-size-sm solid $bpk-color-gray-700;
+    background-color: $bpk-color-gray-200;
+  }
+}

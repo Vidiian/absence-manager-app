@@ -1,0 +1,47 @@
+{
+  "name": "absentee-manager-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "backpack-react-scripts": "4.0.7",
+    "bpk-component-calendar": "^4.1.12",
+    "bpk-component-fieldset": "^1.0.24",
+    "bpk-component-grid": "^1.1.27",
+    "bpk-component-radio": "^1.1.29",
+    "bpk-component-select": "^2.1.29",
+    "bpk-component-table": "^1.0.23",
+    "bpk-component-text": "^1.0.21",
+    "bpk-react-utils": "^2.3.6",
+    "bpk-stylesheets": "^3.2.66",
+    "date-fns": "^1.28.5",
+    "map.prototype.tojson": "^0.1.3",
+    "prop-types": "^15.6.0",
+    "react-lifecycle-component": "^2.0.5",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.2.1",
+    "redux-thunk": "^2.2.0",
+    "redux-thunk-actions": "^1.1.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",
+    "lint:scss:fix": "stylefmt --recursive 'src/**/*.scss'",
+    "lint:js": "eslint . --ignore-path .gitignore --ext .js,.jsx",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "bpk-component-button": "^1.6.61",
+    "bpk-component-code": "^1.0.21",
+    "bpk-component-grid": "^1.1.27",
+    "bpk-component-text": "^1.0.19",
+    "bpk-mixins": "^17.0.3",
+    "bpk-stylesheets": "^3.2.65",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
