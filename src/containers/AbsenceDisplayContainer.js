@@ -25,7 +25,7 @@ const mapStateToProps = (state) => {
   return { absences };
 };
 
-const mapDispatchToProps = () => {};
+const mapDispatchToProps = () => ({});
 
 const AbsenceDisplayContainer = connect(
   mapStateToProps,
